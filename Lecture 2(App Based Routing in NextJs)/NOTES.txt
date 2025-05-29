@@ -1,0 +1,15 @@
+Note: Code in Lecture 1.
+
+1). public/ Folder – Purpose and Behavior (Then & Now)
+What it does:
+Files inside public/ are served as static assets directly from the root of your website. (pics,images,videos,files etc no .js files)
+
+2). What is app based routing? (logic and .js files, web pages)
+
+If you see in folder structure we have a folder named src\app , in this folder if we add any folder such as about , "src\app\about and in about we add "page.js" , it will become a route.
+
+Eample: our folder structure "src\app\about\page.js" and when we write endpoint "http://localhost:3000/about" it will redirect us to about\page.js. This is nothing but app based routing.
+
+3).Nested Routes: Nested route means such as "http://localhost:3000/about/team" , we will make it like this.
+
+Suppose in src\app\about we make a new folder name "team" and inside team folder we make a file name page.js , so the whole structure become "src\app\about\team\page.js" and we can access it through "http://localhost:3000/about/team" , this is nothing but nested routes.

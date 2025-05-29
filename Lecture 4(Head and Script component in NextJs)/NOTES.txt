@@ -1,0 +1,85 @@
+Note: Code in Lecture 3.
+
+1). MetaData: Metadata is extra information about a page like its title and description.
+It helps search engines and browsers understand your page better.
+In Next.js, you define it using export const metadata = {} inside each page.js file. 
+
+Syntax or way of writing:
+
+Folder structure:
+
+app/
+├── layout.js
+├── page.js         ← homepage
+├── about/
+│   ├── page.js     ← about page
+├── services/
+│   ├── page.js     ← services page
+
+In each page.js we will export metadata at top of the file, and it is case sensitive. Nextjs will auto handle the meta data export.
+
+EXAMPLE:
+
+// app/page.js
+export const metadata = {
+  title: 'My Homepage',
+  description: 'Welcome to my site',
+};
+
+export default function HomePage() {
+  return <h1>Home</h1>;
+}
+
+2). Head.js: head.js is a special file used to manually control the <head> part of an HTML page.
+You can add custom tags like fonts, meta tags, title or favicons inside it.
+Place it in the same folder as page.js, and Next.js will automatically use it for that route. 
+
+EXAMPLE:
+
+app/
+├── about/
+│   ├── page.js
+│   └── head.js     ← this will control the <head> of /about
+
+// app/about/head.js
+export default function Head() {
+  return (
+    <>
+      <title>About Us</title>
+      <meta name="description" content="Learn about our company" />
+      <link rel="icon" href="/favicon.ico" />
+    </>
+  );
+}
+
+
+What is the Script tag?
+
+Websites sometimes need extra tools — like a map, chat widget, or analytics. Those tools come from external scripts.
+
+The <Script> tag in Next.js helps you safely add them:
+
+import Script from 'next/script';
+
+<Script
+  src="https://example.com/analytics.js"
+  strategy="lazyOnload"
+/>
+
+This means: “Hey browser, load this script after the page is ready so it doesn't slow down loading!”
+
+Home Page:
+
+import Script from "next/script";
+
+export default function Home() {
+  return (
+    <>
+      <Script
+        src="/script.js"
+        strategy="lazyOnload"
+      />
+      <div>Home Page</div>
+    </>
+  );
+}

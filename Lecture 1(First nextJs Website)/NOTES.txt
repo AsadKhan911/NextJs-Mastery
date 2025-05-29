@@ -1,0 +1,41 @@
+Basic File/Folder Structure (in 2025 using App Router)
+
+my-nextjs-app/
+├── app/
+├── public/
+├── node_modules/
+├── .next/
+├── package.json
+├── next.config.js
+
+1). app/ folder
+💡 Think of this as your "pages and layout" area.
+
+This is where you build your actual website pages.
+
+You make folders like about, contact, etc., and put a file named page.js inside each one.
+
+Example:
+
+app/
+├── page.js         → your home page ("/")
+├── about/
+│   └── page.js     → the about page ("/about")
+├── layout.js       → the layout shared by all pages
+├── globals.css     → styles for the whole site
+
+2). public/ folder
+💡 A place to store images, videos, logos that visitors can directly access.
+
+Anything you put here is available on your site directly.
+
+For example:
+
+public/logo.png → shows up at https://your-site.com/logo.png
+
+3). .next/ folder
+💡 This is like the engine room of your site — created when you build or run the site.
+
+You don’t edit this. Next.js builds all your pages and keeps them here.
+
+
