@@ -1,0 +1,12 @@
+Code in lecture lecture 3.
+
+In Next.js, the <Link> tag is used to navigate between pages in your app without reloading the whole page, making the website faster and smoother.
+
+EXAMPLE:
+
+ <Link href={'/'}><li>Home</li></Link>
+          <Link href={'/about'}><li>About</li></Link>
+          <Link href={'/blog'}><li>Blog</li></Link>
+          <Link href={'/contact'}><li>Contact</li></Link>
+
+Now u will think how we will navigate to different component direct with as we haven't added any component to render, So this is the beauty of nextJs as we know that the folders inside src/app are get by path for example if we have folder named 'contact' and inside we have 'page.js' so we can access that component with /contact only. So when we click on "About" we will redirect to '/about' and get that component.

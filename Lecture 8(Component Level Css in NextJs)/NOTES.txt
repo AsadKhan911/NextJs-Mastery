@@ -1,0 +1,32 @@
+As we know, we have different component in a project so with each component we have different css of each component. NextJs makes it easy to add css of different modules or component.
+
+For example we have src/app/about , page.js , we can also add css of this component in the same folder, eg 'src/app/about , page.js , about.module.css'
+
+
+And get those styles like this 
+
+import styles from './about.module.css'
+className={styles.main}
+
+FILE STRUCTURE:
+
+src/
+└── app/
+    └── about/
+        ├── page.js
+        └── about.module.css
+
+about.module.css:
+
+.title {
+  font-size: 2rem;
+  color: royalblue;
+}
+
+page.js:
+
+import styles from './about.module.css';
+
+export default function AboutPage() {
+  return <h1 className={styles.title}>About Us</h1>;
+}

@@ -1,0 +1,23 @@
+In Next.js, the <Image> component is a powerful and optimized alternative to the standard <img> tag used in React.js. 
+
+1. How Next.js <Image> Component Works:
+
+Next.js provides the <Image> component via next/image:
+
+import Image from 'next/image';
+
+<Image
+  src="/images/profile.jpg"
+  alt="Profile Picture"
+  width={500}
+  height={500}
+/>
+
+Key Features:
+
+Automatic Optimization: Images are automatically compressed and resized for different devices.
+
+Lazy Loading: Loads images as they enter the viewport.
+
+Responsive Loading: Generates different image sizes (srcSet) based on screen size.
+

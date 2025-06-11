@@ -1,0 +1,37 @@
+1. What is useRouter in Next.js?
+👉 useRouter is a React hook provided by Next.js to:
+
+Navigate between pages
+Get information from the URL (like query parameters or slugs)
+
+EXAMPLE:
+
+import { useRouter } from 'next/router';
+
+function MyComponent() {
+  const router = useRouter();
+
+  console.log(router.pathname); // current path like "/blog/[slug]"
+  console.log(router.query);    // query object like { slug: "hello-world" }
+
+  return <div>Current path: {router.pathname}</div>;
+}
+
+Example Use Case:
+If you have a dynamic blog post page like:
+
+/pages/blog/[slug].js
+
+Then when you visit /blog/hello-world, you can get hello-world using useRouter:
+
+const router = useRouter();
+console.log(router.query.slug); // "hello-world"
+
+ 2. What is a Slug?
+A slug is the part of the URL that identifies a specific page or item, usually in a readable format.
+
+For example:
+
+URL: https://myblog.com/post/hello-world
+                      ↑
+                   This is a slug
