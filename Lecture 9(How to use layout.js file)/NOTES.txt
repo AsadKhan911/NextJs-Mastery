@@ -1,0 +1,26 @@
+What is layout.js file? 
+
+layout.js is a special file in Next.js App Router that wraps all pages in a route segment.
+
+It’s used to define shared UI like headers, footers, or sidebars.
+
+It renders once and stays persistent while navigating between child pages.
+
+Means yaha sa sare ki sari app render hoti h.
+
+If we want k ham ek code paste kren layout.js me or wo hamari pori app me show ho such as navBar to wo ham kese krengy.
+
+EXAMPLE:
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+       <Navbar />
+        {children}
+      </body>
+    </html>
+  );
+}
+
+As we can see we have return <Navbar /> before returning the childrens , so now wo ab hamare sare childrens yani k pori app ma show hoga. Means write once view everywhere.

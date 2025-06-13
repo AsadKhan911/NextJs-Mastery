@@ -1,0 +1,22 @@
+What is a Slug?
+A slug is the part of a website's URL (link) that changes depending on what you're looking at.
+
+ Real-Life Example:
+
+Imagine you're on a blog website.
+You visit this link:
+
+https://myblog.com/blogPost/learn-javascript
+
+The "learn-javascript" part is the slug.
+
+It tells the website: "Show me the blog post about learning JavaScript."
+
+In Next.js:
+Next.js uses [square brackets] to create a dynamic page that can handle any slug.
+
+/blogPost
+  └── [slug] (folder)
+        └── page.js
+
+(Code in previous lectures - blogs project)
