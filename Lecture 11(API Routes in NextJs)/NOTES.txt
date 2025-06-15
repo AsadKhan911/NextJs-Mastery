@@ -1,0 +1,34 @@
+Just like we write API Endpoints in our MERN Stack application in Node.Js , In NextJs we can do the same thing without using NodeJs as a backend.
+
+Folder structure: (backend)
+
+src/
+└── pages/
+    └── api/
+        └── hello.js
+
+Code in lecture 3.
+
+Whole folder structure: (frontend + backend)
+
+src/
+├── app/                       ← handles all frontend routes (UI pages)
+│   ├── layout.js              ← shared layout (like a template)
+│   ├── globals.css            ← global styles (imported in layout.js)
+│   ├── page.js                ← homepage (route: '/')
+│   ├── about/
+│   │   └── page.js            ← /about route
+│   └── contact/
+│       ├── page.js            ← /contact route
+│       └── head.js            ← metadata for /contact
+│
+├── components/                ← reusable components (Navbar, Footer, etc.)
+│   ├── Navbar.jsx
+│   └── Footer.jsx
+│
+├── styles/                    ← optional: for custom CSS modules
+│   └── Button.module.css
+│
+└── pages/                     ← only used for API routes (backend)
+    └── api/
+        └── hello.js           ← API endpoint: /api/hello
